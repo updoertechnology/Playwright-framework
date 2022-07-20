@@ -1,0 +1,48 @@
+{
+    "appenders": {
+        "console": {
+            "type": "console",
+            "category": "console",
+            "layout": {
+                "type": "basic"               
+            }
+        },
+        "file": {
+            "type": "file",
+            "filename": "./testResults/logs/output.log",
+            "pattern": "yyyy-MM-dd",
+            "backup": "3",
+            "MaxFileSize": "100MB",
+            "layout": {
+                "type": "pattern",
+                "pattern": "[%d{yyyy-MM-dd hh:mm:ss.SSS}] [%p] %c - %m"
+            }
+        },
+        "errors": {
+            "type": "file",
+            "filename": "./testResults/logs/error.log",
+            "pattern": "yyyy-MM-dd",
+            "backup": "3",
+            "MaxFileSize": "100MB",
+            "layout": {
+                "type": "pattern",
+                "pattern": "[%d{yyyy-MM-dd hh:mm:ss.SSS}] [%p] %c - %m"
+            }
+        }
+    },
+    "categories": {
+        "default": {
+            "appenders": [
+                "console",
+                "file"
+            ],
+            "level": "DEBUG"
+        },
+        "error": {
+            "appenders": [
+                "errors"
+            ],
+            "level": "ERROR"
+        }
+    }
+}

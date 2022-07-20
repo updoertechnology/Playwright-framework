@@ -1,0 +1,33 @@
+{
+  "name": "playwright",
+  "version": "1.0.0",
+  "description": "playwright Automation",
+  "main": "index.js",
+  "scripts": {
+    "smokeTest": "set ALLURE_RESULTS_DIR=testResults/allure-results/smoke&& npx playwright test tests/TestSuites --grep @smoke --headed",
+    "allureReportSmoke": "allure generate testResults/allure-results/smoke --clean -o testResults/allure-report/smoke && allure open testResults/allure-report/smoke"
+  },
+  "author": "Tester",
+  "license": "ISC",
+  "dependencies": {
+    "allure-commandline": "^2.13.8",
+    "allure-playwright": "^2.0.0-beta.14",
+    "log4js": "^6.4.1",
+    "node-fetch": "^2.6.7",
+    "node-stream-zip": "^1.15.0",
+    "playwright": "^1.23.3",
+    "rebuild": "^0.1.2",
+    "unzip-stream": "^0.3.1",
+    "xlsx": "^0.17.5"
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "repository": {
+    "type": "",
+    "url": ""
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.22.0"
+  }
+}
